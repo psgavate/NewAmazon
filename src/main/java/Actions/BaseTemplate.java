@@ -34,8 +34,10 @@ public class BaseTemplate {
 			ReadProperty readProp = new ReadProperty();		
 			initilize.setEnvName(envName);
 			System.out.println(initilize.getEnvName());
+			System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
+			driver = new ChromeDriver();
 			
-			switch(browser){		
+		/*	switch(browser){		
 			case "chrome" : 			
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\Drivers\\chromedriver.exe");
 				driver = new ChromeDriver();			
@@ -49,7 +51,7 @@ public class BaseTemplate {
 			default :
 				System.setProperty("webdriver.chrome.driver", System.getProperty("user.dir")+"\\driver\\chromedriver.exe");
 				driver = new ChromeDriver();		
-			}	
+			}	*/
 					
 			initilize.setDriver(driver);		
 			driver.manage().window().maximize();
